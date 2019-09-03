@@ -1,0 +1,2200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="8feb611c-5fac-4429-aec7-e4d7ddefcaa6" created="2.7.0" activeEnvironment="Default environment" name="Project 112" resourceRoot="" updated="2.7.0 2019-05-30T13:25:24Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="ProjectSettings@shadowPassword"/>
+  </con:settings>
+  <con:interface xsi:type="con:RestService" id="35c954cd-2cf1-4834-b7c7-508f090df32a" wadlVersion="http://wadl.dev.java.net/2009/02" name="REST Service 1" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints/>
+    <con:resource name="/" path="/" id="d08c60aa-451b-498c-9a85-9457044f21c3">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET" id="667a65e2-02d5-4dab-8351-e0c54739b287" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:request name="GET Request" id="8ba4ada4-a323-4b60-8833-f18e3a03949e" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://example.com</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="b4915cd7-9764-45ff-99bf-7d2a3351b829" wadlVersion="http://wadl.dev.java.net/2009/02" name="Ready! API TestServer API" type="rest" basePath="/api/v1" definitionUrl="file:/C:/Users/richa.mittal/ready-api-server/ready-api-server/mystic-server/src/main/resources/swagger-definition.yaml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:description xsi:nil="true"/>
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="Ready! API TestServer API.wadl">
+      <con:part>
+        <con:url>Ready! API TestServer API.wadl</con:url>
+        <con:content><![CDATA[<application xmlns="http://wadl.dev.java.net/2009/02">
+  <doc xml:lang="en" title="Ready! API TestServer API"/>
+  <resources base="/v1">
+    <resource path="readyapi/executions" id="/readyapi/executions">
+      <doc xml:lang="en" title="/readyapi/executions"/>
+      <method name="GET" id="getExecutions">
+        <doc xml:lang="en" title="getExecutions">Returns last executions</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="500">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="postRecipe">
+        <doc xml:lang="en" title="postRecipe">Post test recipe</doc>
+        <request>
+          <param name="async" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="callback" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="429">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="500">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="readyapi/executions/xml" id="/readyapi/executions/xml">
+      <doc xml:lang="en" title="/readyapi/executions/xml"/>
+      <method name="POST" id="postProjectExecution">
+        <doc xml:lang="en" title="postProjectExecution">Post test project</doc>
+        <request>
+          <param name="testCaseName" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="testSuiteName" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="async" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="callback" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <representation mediaType="application/xml"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="429">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="500">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="readyapi/executions/{executionID}" id="/readyapi/executions/{executionID}">
+      <doc xml:lang="en" title="/readyapi/executions/{executionID}"/>
+      <method name="DELETE" id="cancelExecution">
+        <doc xml:lang="en" title="cancelExecution">Cancels execution</doc>
+        <request>
+          <param name="executionID" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        </request>
+        <response status="204">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="500">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="readyapi/executions/{executionID}/status" id="/readyapi/executions/{executionID}/status">
+      <doc xml:lang="en" title="/readyapi/executions/{executionID}/status"/>
+      <method name="GET" id="getExecutionStatus">
+        <doc xml:lang="en" title="getExecutionStatus">Gets execution report</doc>
+        <request>
+          <param name="executionID" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="500">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="readyapi/executions/{executionId}/files" id="/readyapi/executions/{executionId}/files">
+      <doc xml:lang="en" title="/readyapi/executions/{executionId}/files"/>
+      <method name="POST" id="addFile">
+        <doc xml:lang="en" title="addFile">Post test recipe</doc>
+        <request>
+          <param name="executionId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="async" type="xs:string" required="false" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <representation mediaType="multipart/form-data"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="412">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="422">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="429">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="500">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="">
+          <representation mediaType="multipart/form-data"/>
+        </response>
+      </method>
+    </resource>
+  </resources>
+</application>]]></con:content>
+        <con:type>http://wadl.dev.java.net/2009/02</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+    </con:endpoints>
+    <con:resource name="/readyapi/executions" path="/readyapi/executions" id="9a3a5338-3c1f-4818-abd6-1d9c0cd518af">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="getExecutions" id="7d7b9d0b-8884-4103-9fed-a24940c1c9b9" method="GET">
+        <con:description>Returns last executions</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="79572676-b4d5-48d1-92c0-5e2fa0e9bd5d" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8080</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/v1/readyapi/executions</con:originalUri>
+          <con:credentials>
+            <con:username>tester</con:username>
+            <con:password>testing</con:password>
+            <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+            <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="25e36629-5c79-4dff-9db0-00ccc95cc99c">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+              <con:username>tester</con:username>
+              <con:password>testing</con:password>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+              <con:username>tester</con:username>
+              <con:password>testing</con:password>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+      <con:method name="postRecipe" id="e6732437-6021-4848-98cd-0d36fb3341a5" method="POST">
+        <con:description>Post test recipe</con:description>
+        <con:settings/>
+        <con:parameters>
+          <con:parameter>
+            <con:name>async</con:name>
+            <con:value>true</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>true</con:default>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>callback</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>429</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="d5f6320e-d343-4b05-b9b3-a4cdae463dbf" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters>
+            <con:entry key="async" value="true"/>
+            <con:entry key="callback" value=""/>
+          </con:parameters>
+          <con:environmentSpec>
+            <con:entry environmentId="25e36629-5c79-4dff-9db0-00ccc95cc99c">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/readyapi/executions/xml" path="/testjobs" id="1be66ff4-ffe3-4932-9c9a-12f6a1a755b3">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="postProjectExecution" id="02e64604-ca7b-4843-9363-1b8c7fe46ad8" method="POST">
+        <con:description>Post test project</con:description>
+        <con:settings/>
+        <con:parameters>
+          <con:parameter>
+            <con:name>testCaseName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>testSuiteName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>async</con:name>
+            <con:value>true</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>true</con:default>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>callback</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>environment</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>clientCertFileName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>clientCertPassword</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>projectPassword</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>hostAndPort</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>tags</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>429</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="0a390ee6-95d1-4912-8702-90523ff3daf3" mediaType="application/xml" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/api/v1/testjobs</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="async" value="true"/>
+            <con:entry key="environment" value=""/>
+            <con:entry key="clientCertFileName" value=""/>
+            <con:entry key="clientCertPassword" value=""/>
+            <con:entry key="testSuiteName" value=""/>
+            <con:entry key="hostAndPort" value=""/>
+            <con:entry key="callback" value=""/>
+            <con:entry key="testCaseName" value=""/>
+            <con:entry key="projectPassword" value=""/>
+            <con:entry key="tags" value=""/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>testCaseName</con:entry>
+            <con:entry>testSuiteName</con:entry>
+            <con:entry>async</con:entry>
+            <con:entry>callback</con:entry>
+            <con:entry>environment</con:entry>
+            <con:entry>clientCertFileName</con:entry>
+            <con:entry>clientCertPassword</con:entry>
+            <con:entry>projectPassword</con:entry>
+            <con:entry>hostAndPort</con:entry>
+            <con:entry>tags</con:entry>
+          </con:parameterOrder>
+          <con:environmentSpec>
+            <con:entry environmentId="25e36629-5c79-4dff-9db0-00ccc95cc99c">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/readyapi/executions/{executionID}" path="/executions/{executionID}" id="0534be2e-c750-422d-83c7-903503c39510">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>executionID</con:name>
+          <con:value/>
+          <con:style>TEMPLATE</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="cancelExecution" id="106c9645-a8a6-4df2-9e93-eb510352c2e1" method="DELETE">
+        <con:description>Cancels execution</con:description>
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>executionID</con:name>
+            <con:style>TEMPLATE</con:style>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>204</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="6c525e8b-9212-4d22-be81-7a04bc8afbae" mediaType="application/json" postQueryString="false">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="25e36629-5c79-4dff-9db0-00ccc95cc99c">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/readyapi/executions/{executionID}/status" path="/executions/{executionID}/status" id="0938f2a2-2334-40ae-8e5b-6bd0e12e7914">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>executionID</con:name>
+          <con:value/>
+          <con:style>TEMPLATE</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="getExecutionStatus" id="a1052374-c290-4e7c-a09d-a3bb19e1fa96" method="GET">
+        <con:description>Gets execution report</con:description>
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>executionID</con:name>
+            <con:style>TEMPLATE</con:style>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="847f3a2f-368f-4af9-91e2-43ee9249834d" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/v1/readyapi/executions/c63c35cb-6cf5-4d84-b80b-ae27a3e5fb92/status</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="executionID" value="c63c35cb-6cf5-4d84-b80b-ae27a3e5fb92" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+          <con:environmentSpec>
+            <con:entry environmentId="25e36629-5c79-4dff-9db0-00ccc95cc99c">
+              <con:authProfile>dev</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/readyapi/executions/{executionId}/files" path="/executions/{executionId}/files" id="ec246d16-f732-4b89-9cca-36c1d9597a97">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>executionId</con:name>
+          <con:value/>
+          <con:style>TEMPLATE</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="addFile" id="3db2bcab-5563-45ba-9978-96d2e00d69f7" method="POST">
+        <con:description>Post test recipe</con:description>
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>executionId</con:name>
+            <con:style>TEMPLATE</con:style>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>async</con:name>
+            <con:value>true</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>true</con:default>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>412</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>422</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>429</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>multipart/form-data</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="35c1457e-2fcb-4241-9455-a71a24e8097d" mediaType="multipart/form-data" postQueryString="false">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <entry key="async" value="true" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+          <con:environmentSpec>
+            <con:entry environmentId="25e36629-5c79-4dff-9db0-00ccc95cc99c">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/readyapi/executions/composite" path="/readyapi/executions/composite" id="9875f282-525c-4c8e-bc0a-abcb9daf76a1">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="postCompositeProjectExecution" id="4b81b307-37d6-4fb1-b3fe-820dc47c770f" method="POST">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter>
+            <con:name>testCaseName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>testSuiteName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>environment</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>async</con:name>
+            <con:value>true</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>true</con:default>
+          </con:parameter>
+          <con:parameter>
+            <con:name>callback</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>clientCertFileName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>clientCertPassword</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>hostAndPort</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>tags</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/zip</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>multipart/form-data</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>429</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/zip</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>multipart/form-data</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="5cc8782e-37a6-4915-91dc-5cbf70574c83" mediaType="application/zip" postQueryString="false">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/readyapi/executions/project" path="/readyapi/executions/project" id="5e02ed66-0946-4ca2-a754-43d0c3ecce27">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="postRequestToRunProjectFromRepository" id="c9874820-633b-48b1-95a3-eaadf42e3c1c" method="POST">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter>
+            <con:name>repositoryName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>projectFileName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>testCaseName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>testSuiteName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>environment</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>async</con:name>
+            <con:value>true</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>true</con:default>
+          </con:parameter>
+          <con:parameter>
+            <con:name>projectPassword</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>hostAndPort</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>tags</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>429</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="687ee43b-c335-4b67-afe9-5c1813bab52a" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/readyapi/executions/swagger" path="/readyapi/executions/swagger" id="311feaae-c127-4f30-9b48-580557d9ddbd">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="postRequestToExecuteSwagger" id="ed01a22b-72cc-4d7f-895b-d52dbba6072c" method="POST">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter>
+            <con:name>endpoint</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>swaggerEndpoint</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>callback</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>async</con:name>
+            <con:value>true</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>true</con:default>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/yaml</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>429</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/yaml</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="f2863e5a-93fc-4104-9cc1-117eeb986a29" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/readyapi/executions/{executionID}/logs" path="/readyapi/executions/{executionID}/logs" id="503541ba-6bd8-4dea-a00e-224aaee38610">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>executionID</con:name>
+          <con:value/>
+          <con:style>TEMPLATE</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="getMessageExchanges" id="6156a087-3509-4e57-99ec-b06ed40bdb5a" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="31f24297-8bf6-41ac-ae10-72e0d48b1153" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/readyapi/executions/{executionID}/transactions/{transactionId}" path="/readyapi/executions/{executionID}/transactions/{transactionId}" id="36c4039c-6de0-4b38-a4bc-3fcf7092e373">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>executionID</con:name>
+          <con:value/>
+          <con:style>TEMPLATE</con:style>
+          <con:default/>
+        </con:parameter>
+        <con:parameter>
+          <con:name>transactionId</con:name>
+          <con:value/>
+          <con:style>TEMPLATE</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="getMessageExchange" id="2d883503-7b86-4ce7-8536-d45bfa6e6b4e" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="d7e1d813-fc90-416a-8a05-a561d7d9696a" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/executions" path="/executions" id="0a068e22-2d04-4ab5-b867-e472bcbc0d72">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="getExecutions" id="7ef5e7a8-0215-41d1-a02a-1589c4ab847c" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="87a2d307-37ed-489d-aa15-ea3280d957b2" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+      <con:method name="postRecipe" id="830e3386-cd91-44e3-a439-23155a0da483" method="POST">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter>
+            <con:name>async</con:name>
+            <con:value>true</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>true</con:default>
+          </con:parameter>
+          <con:parameter>
+            <con:name>callback</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>429</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="11fc698c-7a73-46a8-b9c5-b36c2001dca8" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters>
+            <con:entry key="async" value="true"/>
+            <con:entry key="callback" value=""/>
+          </con:parameters>
+          <con:environmentSpec>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/executions/xml" path="/executions/xml" id="7ba1a413-4688-4791-b1b3-06c4d88cd79d">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="postProjectExecution" id="bbac053b-2eb3-4c95-b39c-385e0c2b398c" method="POST">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter>
+            <con:name>testCaseName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>testSuiteName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>environment</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>async</con:name>
+            <con:value>true</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>true</con:default>
+          </con:parameter>
+          <con:parameter>
+            <con:name>callback</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>clientCertFileName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>clientCertPassword</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>projectPassword</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>hostAndPort</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>tags</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>proxyHost</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>proxyPort</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>proxyUsername</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>proxyPassword</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>multipart/form-data</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>429</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>multipart/form-data</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="dcee0f41-cf3d-461b-af01-49545e52c731" mediaType="application/xml">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters>
+            <con:entry key="clientCertFileName" value=""/>
+            <con:entry key="proxyUsername" value=""/>
+            <con:entry key="hostAndPort" value=""/>
+            <con:entry key="proxyPassword" value=""/>
+            <con:entry key="proxyHost" value=""/>
+            <con:entry key="tags" value=""/>
+            <con:entry key="async" value="true"/>
+            <con:entry key="proxyPort" value=""/>
+            <con:entry key="environment" value=""/>
+            <con:entry key="clientCertPassword" value=""/>
+            <con:entry key="testSuiteName" value=""/>
+            <con:entry key="callback" value=""/>
+            <con:entry key="testCaseName" value=""/>
+            <con:entry key="projectPassword" value=""/>
+          </con:parameters>
+          <con:environmentSpec>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/executions/composite" path="/executions/composite" id="108b14e7-3408-4462-99ae-61ad30734c8e">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="postCompositeProjectExecution" id="3a5212af-577e-47ee-88b6-cab73ad05852" method="POST">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter>
+            <con:name>testCaseName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>testSuiteName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>environment</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>async</con:name>
+            <con:value>true</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>true</con:default>
+          </con:parameter>
+          <con:parameter>
+            <con:name>callback</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>clientCertFileName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>clientCertPassword</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>hostAndPort</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>tags</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/zip</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>multipart/form-data</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>429</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/zip</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>multipart/form-data</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="2eedfb4a-fe9b-4c52-bd6e-bbe09947d557" mediaType="application/zip">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters>
+            <con:entry key="async" value="true"/>
+            <con:entry key="environment" value=""/>
+            <con:entry key="clientCertFileName" value=""/>
+            <con:entry key="clientCertPassword" value=""/>
+            <con:entry key="testSuiteName" value=""/>
+            <con:entry key="hostAndPort" value=""/>
+            <con:entry key="callback" value=""/>
+            <con:entry key="testCaseName" value=""/>
+            <con:entry key="tags" value=""/>
+          </con:parameters>
+          <con:environmentSpec>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/executions/project" path="/executions/project" id="ebbd42f7-5671-4ed3-b27f-07522c9fd364">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="postRequestToRunProjectFromRepository" id="06696e82-3e55-4d4b-b282-807bae0c8193" method="POST">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter>
+            <con:name>repositoryName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>projectFileName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>testCaseName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>testSuiteName</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>environment</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>async</con:name>
+            <con:value>true</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>true</con:default>
+          </con:parameter>
+          <con:parameter>
+            <con:name>projectPassword</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>hostAndPort</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>tags</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>429</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="ef30b061-e648-4c12-a246-c93c2d40e568" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters>
+            <con:entry key="async" value="true"/>
+            <con:entry key="environment" value=""/>
+            <con:entry key="projectFileName" value=""/>
+            <con:entry key="testSuiteName" value=""/>
+            <con:entry key="hostAndPort" value=""/>
+            <con:entry key="testCaseName" value=""/>
+            <con:entry key="repositoryName" value=""/>
+            <con:entry key="projectPassword" value=""/>
+            <con:entry key="tags" value=""/>
+          </con:parameters>
+          <con:environmentSpec>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/executions/swagger" path="/executions/swagger" id="5448d324-7ab7-47cd-b71f-d3f2d78bfffc">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="postRequestToExecuteSwagger" id="5dea7914-5cea-4763-9953-6702881276a0" method="POST">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter>
+            <con:name>endpoint</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>swaggerEndpoint</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>callback</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>async</con:name>
+            <con:value>true</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>true</con:default>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/yaml</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>429</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/yaml</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="ef53f1a4-d2f7-4f9a-b3e6-d05ff41528c9" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters>
+            <con:entry key="async" value="true"/>
+            <con:entry key="endpoint" value=""/>
+            <con:entry key="callback" value=""/>
+            <con:entry key="swaggerEndpoint" value=""/>
+          </con:parameters>
+          <con:environmentSpec>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/executions/{executionID}" path="/executions/{executionID}" id="5f8a2043-9006-4aca-83ab-b0e77b857b0e">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>executionID</con:name>
+          <con:value/>
+          <con:style>TEMPLATE</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="cancelExecution" id="7fd0fc1d-0593-41a6-bffc-2339f0789ede" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>204</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="f463e086-ee63-49c6-ab97-91e1ac2003a9" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters>
+            <entry key="executionID" value="" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+          <con:environmentSpec>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/executions/{executionID}/status" path="/executions/{executionID}/status" id="1d89f532-ca74-4a94-af12-dbe4c53d0a3a">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>executionID</con:name>
+          <con:value/>
+          <con:style>TEMPLATE</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="getExecutionStatus" id="0549dbdc-0cd8-4288-9414-d891ed202890" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="04d13e67-53a3-4235-b838-b1cf8f0dce84" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters>
+            <entry key="executionID" value="" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+          <con:environmentSpec>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/executions/{executionID}/logs" path="/executions/{executionID}/logs" id="4a29599c-84b4-42e6-b97d-8c9b2d420649">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>executionID</con:name>
+          <con:value/>
+          <con:style>TEMPLATE</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="getMessageExchanges" id="132c8c66-3092-492a-9d86-fc4a22c43024" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="1750c9f6-3cf5-488e-bd4f-895b5d1e7027" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters>
+            <entry key="executionID" value="" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+          <con:environmentSpec>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/executions/{executionId}/files" path="/executions/{executionId}/files" id="07f03127-b72d-4c71-aeea-17143ba8c646">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>executionId</con:name>
+          <con:value/>
+          <con:style>TEMPLATE</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="addFile" id="6ed6542f-acc1-4b2a-99b1-df2203dbaf0b" method="POST">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter>
+            <con:name>async</con:name>
+            <con:value>true</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>true</con:default>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="REQUEST">
+          <con:mediaType>multipart/form-data</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>412</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>422</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>429</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>multipart/form-data</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="26baad06-4905-4b88-a032-0a410f7d0942" mediaType="multipart/form-data">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters>
+            <con:entry key="executionId" value=""/>
+            <con:entry key="async" value="true"/>
+          </con:parameters>
+          <con:environmentSpec>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/executions/{executionID}/transactions/{transactionId}" path="/executions/{executionID}/transactions/{transactionId}" id="b0ee76f6-9698-4c9b-92c8-6c971b578f78">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>executionID</con:name>
+          <con:value/>
+          <con:style>TEMPLATE</con:style>
+          <con:default/>
+        </con:parameter>
+        <con:parameter>
+          <con:name>transactionId</con:name>
+          <con:value/>
+          <con:style>TEMPLATE</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="getMessageExchange" id="8b025c58-03cf-4df3-97c0-54e95c7196cf" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="2c348c9e-c28c-4f77-957b-9ff9b15baba6" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters>
+            <con:entry key="executionID" value=""/>
+            <con:entry key="transactionId" value=""/>
+          </con:parameters>
+          <con:environmentSpec>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/users/" path="/users/" id="e5bf3355-06f7-48b0-a7df-e42e4c000de6">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET" id="88eaa9f4-c2d5-4339-a64e-8aa7b3dcf233" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="7278f269-9d86-45f4-8786-25d9ad9d0b90" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/users/{username}" path="/users/{username}" id="f0b5f89f-95d1-45ca-a50b-738e8214c7ee">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>username</con:name>
+          <con:value/>
+          <con:style>TEMPLATE</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="GET" id="0b107876-09c7-475e-9b49-f9bbe1e3363f" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>403</con:status>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="7324ee10-fdf2-4270-b20c-9bd78c933957" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters>
+            <entry key="username" value="" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+          <con:environmentSpec>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/users/token" path="/users/token" id="808737b8-1db7-462a-9572-9043ba93a546">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET" id="3fee8fb2-3d90-4825-bbaa-2ed6f03042ca" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/plain</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="39433817-de6f-49ab-a9cc-9c9cd98dd210" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://testserver.readyapi.io:8080</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
+              <con:authProfile>User2</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="e1e8ebfb-1a6e-4226-9686-645cf27c16f6">
+              <con:authProfile>Testserver admin</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="d03c0bc2-4f46-47c8-829c-59874565e586" name="TestSuite 1">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="606966af-9b51-45cc-b4d6-bddad9cff856" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase 1" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="datasource" name="DataSource" id="0aa32480-64b7-411f-8248-f924862fa754">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>C:/Users/ibne.khan/Desktop/data.xlsx</file>
+              <worksheet>Sheet1</worksheet>
+              <cell>A1</cell>
+              <ignoreEmpty>false</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>value</con:property>
+          <con:completeLastOperation>true</con:completeLastOperation>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="REST Request" id="76efdd7f-c83f-47aa-85c3-7d74153443ac">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request" id="8ba4ada4-a323-4b60-8833-f18e3a03949e" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://example.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://example.com/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="227a71c4-95e0-46bf-8a27-83434599a188" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="67b761d1-68b3-49d5-b4d7-0481498b0260">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>DataSource</dataSourceStep>
+          <targetStep>REST Request</targetStep>
+          <discardResults>false</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="REST Request_attachment" id="bfac62cc-20ab-4727-a610-360a9e4ddd5c" disabled="true">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request_attachment" id="8ba4ada4-a323-4b60-8833-f18e3a03949e" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://example.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://example.com/</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:attachment>
+              <con:name>data.xlsx</con:name>
+              <con:contentType>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</con:contentType>
+              <con:size>8305</con:size>
+              <con:contentId>data.xlsx</con:contentId>
+              <con:data>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</con:data>
+              <con:id>a6dc92a0-79fa-4b61-8e20-5bb7a1784273</con:id>
+            </con:attachment>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>0aa32480-64b7-411f-8248-f924862fa754</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:reportTemplates/>
+    <con:xmlTemplates/>
+    <con:xmlTemplates/>
+    <con:parameters/>
+    <con:parameters/>
+  </con:reporting>
+  <con:reporting/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// def token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// def token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// def headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>

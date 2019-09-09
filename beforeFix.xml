@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <properties>
+    <property name="testjobId" value="f35ea165-ff2b-4cff-b31b-e980f31ecb90"/>
+    <property name="status" value="CANCELED"/>
+  </properties>
+  <testsuite name="Mixed Project.Test Suite 1" tests="2" failures="0" errors="0" time="7.074">
+    <testcase name="Rest_Request" time="0.453"/>
+    <testcase name="HTTPs_Request" time="6.545"/>
+  </testsuite>
+</testsuites>

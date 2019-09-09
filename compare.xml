@@ -1,0 +1,28 @@
+before fix
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <properties>
+    <property name="testjobId" value="f35ea165-ff2b-4cff-b31b-e980f31ecb90"/>
+    <property name="status" value="CANCELED"/>
+  </properties>
+  <testsuite name="Mixed Project.Test Suite 1" tests="2" failures="0" errors="0" time="7.074">
+    <testcase name="Rest_Request" time="0.453"/>
+    <testcase name="HTTPs_Request" time="6.545"/>
+  </testsuite>
+</testsuites>
+
+After Fix
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <properties>
+    <property name="testjobId" value="197e6f70-c8b3-4dff-8e3d-bcac0025c4c5"/>
+    <property name="status" value="CANCELED"/>
+  </properties>
+  <testsuite name="Mixed Project.Test Suite 1" tests="2" failures="1" errors="0" time="6.034">
+    <testcase name="Rest_Request" time="0.32"/>
+    <testcase name="HTTPs_Request" time="5.646">
+      <failure type="Canceled test case" message="Canceled test case">&lt;h3>&lt;b>Delay Canceled&lt;/b>&lt;/h3>
+      </failure>
+    </testcase>
+  </testsuite>
+</testsuites>

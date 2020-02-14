@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="aa064d14-eaa8-4a9a-934e-a666c621ea9a" created="2.7.0" activeEnvironment="Default environment" name="scanProject-1" resourceRoot="" updated="2.7.0 2019-05-30T13:25:24Z" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="aa064d14-eaa8-4a9a-934e-a666c621ea9a" created="2.7.0" activeEnvironment="Default environment" name="scanProject-1" resourceRoot="" updated="3.0.0 2019-11-05T14:42:03Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
   <con:interface xsi:type="con:RestService" id="10e9d19d-b236-424d-9a1e-dc3f0b4557d9" wadlVersion="http://wadl.dev.java.net/2009/02" name="REST Service 1" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
@@ -20,6 +20,10 @@
         <con:request name="GET Request" id="b486be2e-d227-41e1-831b-31cf985cb717" mediaType="application/json">
           <con:settings/>
           <con:endpoint>http://google.com</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
           <con:parameters/>
         </con:request>
       </con:method>
@@ -57,6 +61,12 @@
           </con:restRequest>
         </con:config>
       </con:testStep>
+      <con:testStep type="delay" name="Delay" id="dd53793e-b4a2-4eff-bab5-73dc7bfff351">
+        <con:settings/>
+        <con:config>
+          <delay>10000</delay>
+        </con:config>
+      </con:testStep>
       <con:testStep type="restrequest" name="Copy of REST Request" id="199a3185-938b-43b4-bffe-0e749cfe910a">
         <con:settings/>
         <con:config service="REST Service 1" resourcePath="/" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -84,6 +94,11 @@
       </con:testStep>
       <con:properties/>
       <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>dd53793e-b4a2-4eff-bab5-73dc7bfff351</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
     </con:testCase>
     <con:testCase id="12a3a6ee-b553-4f1e-9375-e0c7e6c3a908" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="HTTP" searchProperties="true" timeout="0">
       <con:settings/>

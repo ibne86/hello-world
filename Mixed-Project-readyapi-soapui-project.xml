@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="1e659ec3-70b5-4f47-9289-67ead209b67a" created="2.7.0" activeEnvironment="Default environment" name="Mixed Project" resourceRoot="" updated="2.7.0 2019-05-30T13:25:24Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings/>
+<con:soapui-project id="1e659ec3-70b5-4f47-9289-67ead209b67a" created="2.7.0" activeEnvironment="Default environment" name="Mixed Project" resourceRoot="" updated="3.0.0 2019-11-05T14:42:03Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">false</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
+  </con:settings>
   <con:interface xsi:type="con:RestService" id="3aabc26d-0b84-4bde-80ff-291357696a9f" wadlVersion="http://wadl.dev.java.net/2009/02" name="REST Service 2" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings>
       <con:setting id="71c7ad61-8cf1-4e24-95d0-4c987671d7cbfileName">REST-Service-2</con:setting>
@@ -637,7 +643,7 @@
           <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:jmsPropertyConfig/>
           <con:parameters>
-            <entry key="executionID" value="c63c35cb-6cf5-4d84-b80b-ae27a3e5fb92" xmlns="http://eviware.com/soapui/config"/>
+            <con:entry key="executionID" value="c63c35cb-6cf5-4d84-b80b-ae27a3e5fb92"/>
           </con:parameters>
           <con:environmentSpec>
             <con:entry environmentId="25e36629-5c79-4dff-9db0-00ccc95cc99c">
@@ -724,7 +730,7 @@
           </con:credentials>
           <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters>
-            <entry key="async" value="true" xmlns="http://eviware.com/soapui/config"/>
+            <con:entry key="async" value="true"/>
           </con:parameters>
           <con:environmentSpec>
             <con:entry environmentId="25e36629-5c79-4dff-9db0-00ccc95cc99c">
@@ -1784,7 +1790,7 @@
             <con:authType>No Authorization</con:authType>
           </con:credentials>
           <con:parameters>
-            <entry key="executionID" value="" xmlns="http://eviware.com/soapui/config"/>
+            <con:entry key="executionID" value=""/>
           </con:parameters>
           <con:environmentSpec>
             <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
@@ -1833,7 +1839,7 @@
             <con:authType>No Authorization</con:authType>
           </con:credentials>
           <con:parameters>
-            <entry key="executionID" value="" xmlns="http://eviware.com/soapui/config"/>
+            <con:entry key="executionID" value=""/>
           </con:parameters>
           <con:environmentSpec>
             <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
@@ -1882,7 +1888,7 @@
             <con:authType>No Authorization</con:authType>
           </con:credentials>
           <con:parameters>
-            <entry key="executionID" value="" xmlns="http://eviware.com/soapui/config"/>
+            <con:entry key="executionID" value=""/>
           </con:parameters>
           <con:environmentSpec>
             <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
@@ -2092,7 +2098,7 @@
             <con:authType>No Authorization</con:authType>
           </con:credentials>
           <con:parameters>
-            <entry key="username" value="" xmlns="http://eviware.com/soapui/config"/>
+            <con:entry key="username" value=""/>
           </con:parameters>
           <con:environmentSpec>
             <con:entry environmentId="1dc3f0eb-af76-41b4-bcd6-96f9348eef2e">
@@ -2149,74 +2155,6 @@
         <con:setting id="a733d19a-a211-400e-86dd-871b9da0e1ccfileName">Rest_Request</con:setting>
       </con:settings>
       <con:savedRecentRuns>1</con:savedRecentRuns>
-      <con:testStep type="restrequest" name="Copy of REST Request" id="a1371d97-ac81-4519-827a-df50d79da5b4" disabled="true">
-        <con:settings/>
-        <con:config service="REST Service 2" resourcePath="" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:restRequest name="Copy of REST Request" id="b35e60d4-09b1-48ae-833b-ea2e5a0b15eb" mediaType="application/json" postQueryString="false">
-            <con:settings>
-              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-            </con:settings>
-            <con:endpoint>https://petstore.swagger.io</con:endpoint>
-            <con:request>{
-  "id": 0,
-  "category": {
-    "id": 0,
-    "name": "string"
-  },
-  "name": "doggie",
-  "photoUrls": [
-    "string"
-  ],
-  "tags": [
-    {
-      "id": 0,
-      "name": "string"
-    }
-  ],
-  "status": "available"
-}</con:request>
-            <con:originalUri>https://petstore.swagger.io/v2/pet</con:originalUri>
-            <con:assertion type="Valid HTTP Status Codes" id="cca28243-396c-410d-95e2-aa946445c0c1" name="Valid HTTP Status Codes">
-              <con:settings/>
-              <con:configuration>
-                <codes>200</codes>
-              </con:configuration>
-            </con:assertion>
-            <con:credentials>
-              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
-              <con:authType>No Authorization</con:authType>
-            </con:credentials>
-            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-            <con:jmsPropertyConfig/>
-            <con:parameters/>
-          </con:restRequest>
-        </con:config>
-      </con:testStep>
-      <con:testStep type="restrequest" name="REST Request 2" id="5f4db61e-d692-418b-bffb-06aa4af281d7" disabled="true">
-        <con:settings/>
-        <con:config service="REST Service 3" resourcePath="/" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:restRequest name="REST Request 2" id="c7e6407a-5588-457b-b995-106f1359f98e" mediaType="application/json" postQueryString="false">
-            <con:settings>
-              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-            </con:settings>
-            <con:endpoint>https://petstore.swagger.io</con:endpoint>
-            <con:request/>
-            <con:originalUri>https://petstore.swagger.io/</con:originalUri>
-            <con:assertion type="Valid HTTP Status Codes" id="da23614e-88b9-4f40-af7f-6689da877f8d" name="Valid HTTP Status Codes">
-              <con:settings/>
-              <con:configuration>
-                <codes>200</codes>
-              </con:configuration>
-            </con:assertion>
-            <con:credentials>
-              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
-              <con:authType>No Authorization</con:authType>
-            </con:credentials>
-            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-            <con:parameters/>
-          </con:restRequest>
-        </con:config>
-      </con:testStep>
       <con:testStep type="delay" name="Delay" id="9cc3e1a4-07a0-4a51-9ea4-f90d4e29ae13">
         <con:settings/>
         <con:config>
@@ -2268,16 +2206,6 @@
       </con:testStep>
       <con:properties/>
       <con:reportParameters/>
-      <con:breakPoints>
-        <con:testStepId>a1371d97-ac81-4519-827a-df50d79da5b4</con:testStepId>
-        <con:status>NONE</con:status>
-        <con:properties/>
-      </con:breakPoints>
-      <con:breakPoints>
-        <con:testStepId>5f4db61e-d692-418b-bffb-06aa4af281d7</con:testStepId>
-        <con:status>NONE</con:status>
-        <con:properties/>
-      </con:breakPoints>
     </con:testCase>
     <con:testCase id="2f471d5e-f807-4f78-ba2b-50bd3c04c883" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="HTTPs_Request" searchProperties="true" timeout="0">
       <con:settings>
@@ -2287,7 +2215,7 @@
       <con:testStep type="delay" name="Delay" id="a2095dfa-5316-41f6-b68b-ca571fa74813">
         <con:settings/>
         <con:config>
-          <delay>60000</delay>
+          <delay>10000</delay>
         </con:config>
       </con:testStep>
       <con:testStep type="httprequest" name="HTTP Request" id="cc33ec52-a687-4baf-952a-1874e8e061d0">

@@ -128,7 +128,7 @@
       <con:properties/>
       <con:reportParameters/>
     </con:testCase>
-    <con:testCase id="ddc5db71-9a8f-48ef-9b5e-e5b3d24d9a0e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="ExcelDataLoop" searchProperties="true" timeout="0">
+    <con:testCase id="ddc5db71-9a8f-48ef-9b5e-e5b3d24d9a0e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="ExcelDataLoop" searchProperties="true" timeout="0" disabled="true">
       <con:settings>
         <con:setting id="7aae4624-4e90-43df-bcab-f6ec2d04e683fileName">ExcelDataLoop</con:setting>
       </con:settings>

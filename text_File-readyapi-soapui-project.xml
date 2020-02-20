@@ -184,7 +184,7 @@
           <delay>5000</delay>
         </con:config>
       </con:testStep>
-      <con:testStep type="restrequest" name="Request_Delay" id="f98ab3c6-cf3c-4a5a-85a2-ba713a228244">
+      <con:testStep type="restrequest" name="Request_Delay" id="f98ab3c6-cf3c-4a5a-85a2-ba713a228244" disabled="true">
         <con:settings/>
         <con:config service="https://example.com" resourcePath="" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="Request_Delay" id="bfc608c2-6ff8-4e22-a463-1f5cd6cb8e2b" mediaType="application/json" postQueryString="false">

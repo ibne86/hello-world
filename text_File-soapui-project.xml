@@ -245,6 +245,131 @@
         </con:entry>
       </con:environmentSpec>
     </con:testCase>
+    <con:testCase id="23f6bf76-4941-47ee-887e-46775c2e0776" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case2" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="Request_Pass" id="1612126e-1ecd-4cc6-b4d9-d188a711179a">
+        <con:settings/>
+        <con:config service="https://example.com" resourcePath="" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request_Pass" id="bfc608c2-6ff8-4e22-a463-1f5cd6cb8e2b" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://example.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://example.com/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="f22ae1df-4e37-4b5b-9f9a-0fd7f6445ad4" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+            <con:environmentSpec>
+              <con:entry environmentId="f626b85b-863b-4d89-a19a-5d7889202519">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="c5c9e2a0-3337-4aad-8180-fe094b05bb08">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="1c733e89-5a57-43b0-8113-2736b32a6ed5">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Request_Fail" id="addc0dba-9291-4e7f-af34-ae05790277ec" disabled="true">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request_Fail" id="b6cd0781-43a2-4990-a64d-b08299db094c" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://xyz.co.in</con:endpoint>
+            <con:request/>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="delay" name="Delay" id="9fe9e626-67d8-4e79-b0c4-ba8e54b16090">
+        <con:settings/>
+        <con:config>
+          <delay>5000</delay>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Request_Delay" id="adac3517-8941-4f81-a291-1444475f178a">
+        <con:settings/>
+        <con:config service="https://example.com" resourcePath="" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request_Delay" id="bfc608c2-6ff8-4e22-a463-1f5cd6cb8e2b" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://example.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://example.com/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="dd5a7e40-cc68-45a9-97fe-2a71ae1d8bf2" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+            <con:environmentSpec>
+              <con:entry environmentId="f626b85b-863b-4d89-a19a-5d7889202519">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="c5c9e2a0-3337-4aad-8180-fe094b05bb08">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="1c733e89-5a57-43b0-8113-2736b32a6ed5">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>7b356ea6-4abd-490d-a09d-14c4de13b39a</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>1b4d90aa-989f-4962-b128-75542ef28648</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:environmentSpec>
+        <con:entry environmentId="f626b85b-863b-4d89-a19a-5d7889202519">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="c5c9e2a0-3337-4aad-8180-fe094b05bb08">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="1c733e89-5a57-43b0-8113-2736b32a6ed5">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:testCase>
     <con:properties/>
     <con:reportParameters/>
     <con:environmentSpec>

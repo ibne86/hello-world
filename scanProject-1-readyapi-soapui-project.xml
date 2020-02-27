@@ -64,7 +64,7 @@
       <con:testStep type="delay" name="Delay" id="dd53793e-b4a2-4eff-bab5-73dc7bfff351">
         <con:settings/>
         <con:config>
-          <delay>20000</delay>
+          <delay>2000000</delay>
         </con:config>
       </con:testStep>
       <con:testStep type="restrequest" name="Copy of REST Request" id="199a3185-938b-43b4-bffe-0e749cfe910a">

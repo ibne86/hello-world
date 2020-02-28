@@ -17,6 +17,12 @@
           <con:params/>
           <con:element>html</con:element>
         </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
         <con:request name="GET Request" id="b486be2e-d227-41e1-831b-31cf985cb717" mediaType="application/json">
           <con:settings/>
           <con:endpoint>http://google.com</con:endpoint>
@@ -61,10 +67,10 @@
           </con:restRequest>
         </con:config>
       </con:testStep>
-      <con:testStep type="delay" name="Delay" id="dd53793e-b4a2-4eff-bab5-73dc7bfff351">
+      <con:testStep type="delay" name="Delay" id="dd53793e-b4a2-4eff-bab5-73dc7bfff351" disabled="true">
         <con:settings/>
         <con:config>
-          <delay>60000</delay>
+          <delay>10000</delay>
         </con:config>
       </con:testStep>
       <con:testStep type="restrequest" name="Copy of REST Request" id="199a3185-938b-43b4-bffe-0e749cfe910a">
@@ -123,6 +129,18 @@
           </con:credentials>
           <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="ac1772c8-cfc7-4bd8-8c98-93e0d1867ac2" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="dalay" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="delay" name="Delay" id="c3949607-855e-47e2-8079-e75c3108fc4c">
+        <con:settings/>
+        <con:config>
+          <delay>90000</delay>
         </con:config>
       </con:testStep>
       <con:properties/>
@@ -196,37 +214,6 @@
     <con:testCase id="badf338b-adce-4bd6-b3b2-32db03cc629a" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Copy of REST" searchProperties="true" timeout="0">
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
-      <con:testStep type="restrequest" name="REST Request" id="cd6a41ac-c920-4e33-bd37-018648a6db09">
-        <con:settings/>
-        <con:config service="REST Service 1" resourcePath="/" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:restRequest name="REST Request" id="b486be2e-d227-41e1-831b-31cf985cb717" mediaType="application/json">
-            <con:settings>
-              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-            </con:settings>
-            <con:endpoint>http://google.com</con:endpoint>
-            <con:request/>
-            <con:originalUri>http://www.google.com/</con:originalUri>
-            <con:assertion type="Valid HTTP Status Codes" id="a6f326a4-c25f-47e7-8769-a9b6f0852f02" name="Valid HTTP Status Codes">
-              <con:settings/>
-              <con:configuration>
-                <codes>200</codes>
-              </con:configuration>
-            </con:assertion>
-            <con:credentials>
-              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
-              <con:authType>No Authorization</con:authType>
-            </con:credentials>
-            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-            <con:parameters/>
-          </con:restRequest>
-        </con:config>
-      </con:testStep>
-      <con:testStep type="delay" name="Delay" id="3031e343-3df2-44ec-8efc-5341abbc5d2f">
-        <con:settings/>
-        <con:config>
-          <delay>10000</delay>
-        </con:config>
-      </con:testStep>
       <con:testStep type="restrequest" name="Copy of REST Request" id="ef5cca0d-c9d1-4f0e-9ed0-459070d4f4a3">
         <con:settings/>
         <con:config service="REST Service 1" resourcePath="/" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -234,7 +221,7 @@
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
-            <con:endpoint>http://google.com</con:endpoint>
+            <con:endpoint>http://google.comm</con:endpoint>
             <con:request/>
             <con:originalUri>http://www.google.com/</con:originalUri>
             <con:assertion type="Valid HTTP Status Codes" id="a6f326a4-c25f-47e7-8769-a9b6f0852f02" name="Valid HTTP Status Codes">

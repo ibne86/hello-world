@@ -211,7 +211,7 @@
         <con:properties/>
       </con:breakPoints>
     </con:testCase>
-    <con:testCase id="badf338b-adce-4bd6-b3b2-32db03cc629a" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Copy of REST" searchProperties="true" timeout="0">
+    <con:testCase id="badf338b-adce-4bd6-b3b2-32db03cc629a" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Copy of REST" searchProperties="true" timeout="0" disabled="true">
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
       <con:testStep type="restrequest" name="Copy of REST Request" id="ef5cca0d-c9d1-4f0e-9ed0-459070d4f4a3">

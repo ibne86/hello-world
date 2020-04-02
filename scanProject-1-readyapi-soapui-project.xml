@@ -130,7 +130,7 @@
       <con:testStep type="delay" name="Delay" id="8826ac03-e1ae-4677-9d6f-ed8e9d1ada91">
         <con:settings/>
         <con:config>
-          <delay>90000</delay>
+          <delay>9000</delay>
         </con:config>
       </con:testStep>
       <con:properties/>

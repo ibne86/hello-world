@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "5ec57b90-340b-462d-b0f7-483ec4ed8f96",
-		"name": "Pet Store with passed steps",
+		"_postman_id": "310174fd-3d41-488d-8564-2c9d9f75527f",
+		"name": "Pet Store with failed steps",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -123,6 +123,117 @@
 									"key": "status",
 									"value": "sold"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete pet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8b039706-a3b5-4a1b-bec5-69c40155e86f",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet/1111111111111111",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								"1111111111111111"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "32de9883-d96d-47f9-9fc5-27292efc534f",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/ibne",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"ibne"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place an order for a pet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "32de9883-d96d-47f9-9fc5-27292efc534f",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1111111111111111111111111,\r\n  \"petId\": 11111111,\r\n  \"quantity\": 0,\r\n  \"shipDate\": \"2020-04-02T06:37:45.973Z\",\r\n  \"status\": \"placed\",\r\n  \"complete\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/store/order",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"store",
+								"order"
 							]
 						}
 					},

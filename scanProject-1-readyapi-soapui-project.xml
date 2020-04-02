@@ -4,11 +4,13 @@
   <con:interface xsi:type="con:RestService" id="10e9d19d-b236-424d-9a1e-dc3f0b4557d9" wadlVersion="http://wadl.dev.java.net/2009/02" name="REST Service 1" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
     <con:definitionCache type="TEXT" rootPart=""/>
-    <con:endpoints/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:8080/api/v1/testjobs</con:endpoint>
+    </con:endpoints>
     <con:resource name="/" path="/" id="d7ba1264-a66e-400a-8e83-752d492683aa">
       <con:settings/>
       <con:parameters/>
-      <con:method name="GET" id="2db5387e-fda1-4c25-897c-4d65c294e754" method="GET">
+      <con:method name="GET" id="2db5387e-fda1-4c25-897c-4d65c294e754" method="POST">
         <con:settings/>
         <con:parameters/>
         <con:representation type="RESPONSE">
@@ -30,6 +32,11 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:parameters/>
+        </con:request>
+        <con:request name="post" id="27cfc93a-740b-4746-952b-9e719bb2acd4" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://localhost:8080/api/v1/testjobs</con:endpoint>
           <con:parameters/>
         </con:request>
       </con:method>
@@ -134,7 +141,7 @@
       <con:properties/>
       <con:reportParameters/>
     </con:testCase>
-    <con:testCase id="ac1772c8-cfc7-4bd8-8c98-93e0d1867ac2" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="dalay" searchProperties="true" timeout="0">
+    <con:testCase id="ac1772c8-cfc7-4bd8-8c98-93e0d1867ac2" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="delay" searchProperties="true" timeout="0">
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
       <con:testStep type="delay" name="Delay" id="c3949607-855e-47e2-8079-e75c3108fc4c">
@@ -246,6 +253,34 @@
         <con:status>NONE</con:status>
         <con:properties/>
       </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="bb8adc42-effe-4b8f-8a6d-0bd7843da6e0" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="HTTP_Fail" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="httprequest" name="HTTP Request" id="9f7c7f01-c9b6-4687-8c6f-f653c41a7dd9">
+        <con:settings/>
+        <con:config method="GET" xsi:type="con:HttpRequest" id="0c886f8e-9938-428f-81e9-d2c51e7d20cb" name="HTTP Request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://google.com</con:endpoint>
+          <con:request/>
+          <con:assertion type="Valid HTTP Status Codes" id="798fc876-60a3-4894-8cf7-957398bd98fc" name="Valid HTTP Status Codes">
+            <con:settings/>
+            <con:configuration>
+              <codes>400</codes>
+            </con:configuration>
+          </con:assertion>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
     </con:testCase>
     <con:properties/>
     <con:reportParameters/>

@@ -51,6 +51,10 @@
         <con:request name="post" id="27cfc93a-740b-4746-952b-9e719bb2acd4" mediaType="application/json">
           <con:settings/>
           <con:endpoint>http://localhost:8080/api/v1/testjobs</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
           <con:parameters/>
         </con:request>
       </con:method>
@@ -88,6 +92,31 @@
           </con:restRequest>
         </con:config>
       </con:testStep>
+      <con:testStep type="restrequest" name="Copy of REST Request" id="d42e6e47-aa4d-402d-b5c5-79ebfc4b8090">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Copy of REST Request" id="b486be2e-d227-41e1-831b-31cf985cb717" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://google.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://www.google.com/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="a6f326a4-c25f-47e7-8769-a9b6f0852f02" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
       <con:properties/>
       <con:reportParameters/>
       <con:breakPoints>
@@ -95,46 +124,6 @@
         <con:status>NONE</con:status>
         <con:properties/>
       </con:breakPoints>
-    </con:testCase>
-    <con:testCase id="2defa49c-3785-4033-a8c0-d4bb0c6fa008" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="HTTP" searchProperties="true" timeout="0">
-      <con:settings/>
-      <con:savedRecentRuns>1</con:savedRecentRuns>
-      <con:testStep type="httprequest" name="HTTP Request" id="237a057a-9fbd-4ba1-9dde-39c825e4fbe4">
-        <con:settings/>
-        <con:config method="GET" xsi:type="con:HttpRequest" id="0c886f8e-9938-428f-81e9-d2c51e7d20cb" name="HTTP Request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:settings>
-            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-          </con:settings>
-          <con:endpoint>http://google.com</con:endpoint>
-          <con:request/>
-          <con:assertion type="Valid HTTP Status Codes" id="798fc876-60a3-4894-8cf7-957398bd98fc" name="Valid HTTP Status Codes">
-            <con:settings/>
-            <con:configuration>
-              <codes>200</codes>
-            </con:configuration>
-          </con:assertion>
-          <con:credentials>
-            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-            <con:authType>No Authorization</con:authType>
-          </con:credentials>
-          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-          <con:parameters/>
-        </con:config>
-      </con:testStep>
-      <con:properties/>
-      <con:reportParameters/>
-    </con:testCase>
-    <con:testCase id="4d54e215-c652-43a5-94d4-cd83c2081ca4" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="delay" searchProperties="true" timeout="0">
-      <con:settings/>
-      <con:savedRecentRuns>1</con:savedRecentRuns>
-      <con:testStep type="delay" name="Delay" id="8826ac03-e1ae-4677-9d6f-ed8e9d1ada91">
-        <con:settings/>
-        <con:config>
-          <delay>9000</delay>
-        </con:config>
-      </con:testStep>
-      <con:properties/>
-      <con:reportParameters/>
     </con:testCase>
     <con:properties/>
     <con:reportParameters/>
